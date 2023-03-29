@@ -1,7 +1,7 @@
 # Configure your local environment in this file. Make sure to set
 # `WEBR_ROOT` to the root directory of the webR repo
 -include ~/.webr-vars.mk
-
+WEBR_ROOT = //app/webr
 # Select emfc implementation
 -include $(WEBR_ROOT)/tools/fortran.mk
 
