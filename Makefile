@@ -3,7 +3,7 @@
 R_VERSION = $(shell cat $(WEBR_ROOT)/R/R-VERSION)
 R_VERSION_SHORT = $(shell grep -Eo '[0-9]+\.[0-9]+' $(WEBR_ROOT)/R/R-VERSION)
 
-R_HOST ?= /usr/local
+R_HOST ?= /usr
 
 .PHONY: repo
 repo:
