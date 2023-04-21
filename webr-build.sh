@@ -34,11 +34,13 @@ if [ -d "${ROOT}/lib/${PKG_NAME}" ]; then
   rm -rf "${ROOT}/lib/${PKG_NAME}"
 fi
 mv lib/* ${ROOT}/lib
- 
-# BIN="${ORIG}/repo/bin/emscripten/contrib/${R_VERSION}/"
 
-# mkdir -p $BIN
-# mv lib/*.tgz $BIN
+tar xvf ${ROOT}/lib/${PKG_NAME}
 
-# cd ${ORIG}
-# rm -rf ${TMP}
+BIN="${ORIG}/repo/bin/emscripten/contrib/${R_VERSION}/"
+
+mkdir -p $BIN
+mv lib/*.tgz $BIN
+
+cd ${ORIG}
+rm -rf ${TMP}
