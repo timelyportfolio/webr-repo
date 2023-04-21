@@ -39,7 +39,7 @@ mv lib/* ${ROOT}/lib
 
 echo "${ROOT}/lib/${PKG_NAME}.tgz"
 echo "${ROOT}/lib/${PKG_NAME}/"
-tar -zxvf "${ROOT}/lib/${PKG_NAME}/" "${ROOT}/lib/${PKG_NAME}.tgz"
+tar -zcvf "${ROOT}/lib/${PKG_NAME}.tgz" "${ROOT}/lib/${PKG_NAME}/"
 
 BIN="${ORIG}/repo/bin/emscripten/contrib/${R_VERSION}/"
 
