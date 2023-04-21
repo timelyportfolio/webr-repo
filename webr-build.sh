@@ -8,7 +8,7 @@ PKG_NAME=$(basename $1)
 [[ $PKG_NAME =~ ([^_]+)_ ]]
 PKG_NAME="${BASH_REMATCH[1]-NULL}"
 FILENAME=$(basename $1)
-FILENAME="${FILENAME%.*}"
+FILENAME=${FILENAME##*/}
 
 [[ "$PKG_NAME" == "NULL" ]] && echo "Error: File does not conform to a versioned tarball" && exit 1
 
