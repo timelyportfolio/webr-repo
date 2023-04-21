@@ -37,9 +37,10 @@ if [ -d "${ROOT}/lib/${PKG_NAME}" ]; then
 fi
 mv lib/* ${ROOT}/lib
 
+cd ${ROOT}/lib
 echo "${ROOT}/lib/${FILENAME}.tgz"
 echo "${ROOT}/lib/${PKG_NAME}/"
-tar -zcvf "${ROOT}/lib/${FILENAME}.tgz" "${ROOT}/lib/${PKG_NAME}/"
+tar -zcvf "${ROOT}/lib/${FILENAME}.tgz" "${PKG_NAME}/"
 
 BIN="${ORIG}/repo/bin/emscripten/contrib/${R_VERSION}/"
 
