@@ -8,7 +8,7 @@ PKG_NAME=$(basename $1)
 [[ $PKG_NAME =~ ([^_]+)_ ]]
 PKG_NAME="${BASH_REMATCH[1]-NULL}"
 FILENAME=$(basename $1)
-FILENAME=${FILENAME##*/}
+FILENAME=${FILENAME%.*.*}
 
 [[ "$PKG_NAME" == "NULL" ]] && echo "Error: File does not conform to a versioned tarball" && exit 1
 
@@ -44,7 +44,7 @@ tar -zcvf "${ROOT}/lib/${PKG_NAME}.tgz" "${ROOT}/lib/${PKG_NAME}/"
 BIN="${ORIG}/repo/bin/emscripten/contrib/${R_VERSION}/"
 
 mkdir -p $BIN
-mv lib/*.tgz $BIN
+mv ${ROOT}/lib/*.tgz $BIN
 
 cd ${ORIG}
 rm -rf ${TMP}
