@@ -7,6 +7,8 @@ set -eu
 PKG_NAME=$(basename $1)
 [[ $PKG_NAME =~ ([^_]+)_ ]]
 PKG_NAME="${BASH_REMATCH[1]-NULL}"
+FILENAME=$(basename -- "$fullfile")
+FILENAME="${FILENAME%.*}"
 
 [[ "$PKG_NAME" == "NULL" ]] && echo "Error: File does not conform to a versioned tarball" && exit 1
 
@@ -35,7 +37,7 @@ if [ -d "${ROOT}/lib/${PKG_NAME}" ]; then
 fi
 mv lib/* ${ROOT}/lib
 
-tar -zxvf ${ROOT}/lib/$(basename $1).tgz ${ROOT}/lib/${PKG_NAME}/
+tar -zxvf ${ROOT}/lib/${FILENAME}.tgz ${ROOT}/lib/${PKG_NAME}/
 
 BIN="${ORIG}/repo/bin/emscripten/contrib/${R_VERSION}/"
 
