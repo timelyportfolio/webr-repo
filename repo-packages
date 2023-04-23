@@ -6,4 +6,8 @@ writexl
 lattice
 zoo
 xts
-collapse
+jsonlite
+fastmatch
+magrittr
+Matrix
+RcppArmadillo
