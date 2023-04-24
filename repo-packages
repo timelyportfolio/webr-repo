@@ -11,3 +11,4 @@ fastmatch
 magrittr
 Matrix
 RcppArmadillo
+quadprog
