@@ -11,3 +11,7 @@ jsonlite
 fastmatch
 quadprog
 PerformanceAnalytics
+MASS
+colorspace
+lmtest
+vcd
