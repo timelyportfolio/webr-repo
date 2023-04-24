@@ -11,5 +11,11 @@ fastmatch
 magrittr
 Matrix
 RcppArmadillo
+RcppParallel
+SnowballC
+stopwords
+stringi
+xml2
+yaml
 quadprog
 PerformanceAnalytics
