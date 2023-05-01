@@ -4,6 +4,8 @@ Rcpp
 cpp11
 Formula
 MASS
+colorspace
+lmtest
 writexl
 readxl
 lattice
