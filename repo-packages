@@ -7,11 +7,15 @@ MASS
 colorspace
 lmtest
 vcd
+
 writexl
 readxl
 lattice
 zoo
 xts
+curl
+TTR
 jsonlite
+quantmod
 fastmatch
 R6
