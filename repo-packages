@@ -7,7 +7,6 @@ MASS
 colorspace
 lmtest
 vcd
-
 writexl
 readxl
 lattice
