@@ -6,6 +6,7 @@ Formula
 MASS
 colorspace
 lmtest
+vcd
 writexl
 readxl
 lattice
@@ -13,5 +14,5 @@ zoo
 xts
 jsonlite
 fastmatch
-quadprog
-PerformanceAnalytics
+R6
+ragg
