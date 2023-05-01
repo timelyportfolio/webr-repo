@@ -3,7 +3,9 @@ svglite
 Rcpp
 cpp11
 Formula
+MASS
 writexl
+readxl
 lattice
 zoo
 xts
