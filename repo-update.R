@@ -115,11 +115,11 @@ for (pkg in packages) {
       make_remote_tarball(
         remote_info[["package"]],
         gsub(x=remote_info[["sources"]][[1]][[1]],pattern="zipball",replacement="tarball"),
-        gsub(x=target, pattern= paste0("_",substr(remote_info$extra[[1]]$remotesha,1,7)),replacement="")
+        target
       )
     }
 
-    tarball_file <- basename(gsub(x=target, pattern= paste0("_",substr(remote_info$extra[[1]]$remotesha,1,7)),replacement=""))
+    tarball_file <- basename(target)
     tarball_path <- file.path(webr_contrib_src, tarball_file)
   } else {
     tarball_file <- tarball(pkg, new_ver_string)
