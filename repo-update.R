@@ -72,10 +72,8 @@ make_remote_tarball <- function(pkg, url, target) {
 
   repo_tarball <- file.path(normalizePath("repo"), target)
 
-  withr::with_dir(
-    tmp_dir,
-    tar(repo_tarball, compression = "gzip")
-  )
+  setwd(tmp_dir)
+  tar(repo_tarball, pkg, compression = "gzip")
 }
 
 tarball <- function(pkg, ver) {
