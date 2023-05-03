@@ -119,7 +119,7 @@ for (pkg in packages) {
       )
     }
 
-    tarball_file <- basename(remote_target)
+    tarball_file <- basename(gsub(x=target, pattern= paste0("_",substr(remote_info$extra[[1]]$remotesha,1,7)),replacement=""))
     tarball_path <- file.path(webr_contrib_src, tarball_file)
   } else {
     tarball_file <- tarball(pkg, new_ver_string)
