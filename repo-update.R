@@ -115,7 +115,7 @@ for (pkg in packages) {
       make_remote_tarball(
         remote_info[["package"]],
         gsub(x=remote_info[["sources"]][[1]][[1]],pattern="zipball",replacement="tarball"),
-        remote_target
+        gsub(x=target, pattern= paste0("_",substr(remote_info$extra[[1]]$remotesha,1,7)),replacement="")
       )
     }
 
